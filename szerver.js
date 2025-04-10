@@ -19,10 +19,6 @@ app.get('/', (req, res) => {
     res.send('DOLGOZAT');
 });
 
-app.listen(3001, () => {
-    console.log('fut a 3001-en');
-});
-
 app.get/("/szobak", (req, res) => {
     const sql = "SELECT * FROM szobak";
     db.query(sql, (err, result) => {
@@ -30,3 +26,7 @@ app.get/("/szobak", (req, res) => {
         res.json(results);
     })
 })
+
+app.listen(3001, () => {
+    console.log('fut a 3001-en');
+});
