@@ -26,6 +26,6 @@ app.get("/szobak", (req, res) => {
     });
 });
    
-app.listen(3001, () => {
-    console.log("Fut a 3001 es porton.");
+app.listen(3002, () => {
+    console.log("Fut a 3002 es porton.");
 });
