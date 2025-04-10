@@ -19,13 +19,14 @@ app.get('/', (req, res) => {
     res.send('A szerver működik!');
 });
 
-app.get/("/szobak", (req, res) => {
-    const sql = "SELECT * FROM szobak";
-    db.query(sql, (err, result) => {
-        if (err) return res.tatus(500).json({error: err.message})
-        res.json(results);
-    })
-})
+app.get("/szoba", (req, res) => {
+    db.query("SELECT*FROM szobak"
+    , (err, result) => {
+        if (err) return res.json(err);
+        res.json(result);
+    });
+ 
+});
 
 app.listen(3001, () => {
     console.log('fut a 3001-en');
