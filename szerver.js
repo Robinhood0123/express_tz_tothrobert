@@ -16,7 +16,7 @@ const db = mysql.createConnection({
 });
 
 app.get('/', (req, res) => {
-    res.send('DOLGOZAT');
+    res.send('A szerver műlödik!');
 });
 
 app.get/("/szobak", (req, res) => {
